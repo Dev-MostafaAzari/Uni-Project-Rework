@@ -1,6 +1,7 @@
 .navbar 
 {
     background-color: snow;
+    border-bottom: 1px solid rgb(76, 76, 223);
 }
 
 .navbar .container
@@ -24,6 +25,8 @@
     border-radius: 45px;
     color: rgb(76, 76, 223);
     transition: all 0.5s;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .navbar-nav a:hover
 {
