@@ -1,0 +1,52 @@
+.navbar 
+{
+    background-color: snow;
+}
+
+.navbar .container
+{
+    margin: 0;
+
+}
+.navbar-brand img 
+{
+    border-radius: 45px;
+}
+.navbar-nav
+{
+    gap: 5px;
+    align-items: baseline;
+}
+.navbar-nav a
+{
+    font-size: 20px;
+    padding: 6px 0px;
+    border-radius: 45px;
+    color: rgb(76, 76, 223);
+    transition: all 0.5s;
+}
+.navbar-nav a:hover
+{
+    color: black;
+}
+.navbar-nav .fonts
+{
+    font-size: 30px;
+    border: 0;
+    background-color: snow;
+    color: rgb(76, 76, 223);
+    transition: all 0.5s;
+}
+.navbar-nav .fonts:hover
+{
+    color:black;
+}
+.navbar-toggler
+{
+    outline: none;
+}
+.container .navbar-toggler:focus
+{
+    outline: none;
+    box-shadow: none;
+}
