@@ -11,10 +11,12 @@
     max-height: 800px;
     object-fit: cover;
     object-position: center;
+    
 }
 .Img-h3
 {
     font-size: 50px;
+    
 }
 .textMainImg
 {
@@ -25,14 +27,17 @@
     text-align: center;
     position: absolute;
     width: 100%;
-    top: 55px;
+    top: 0px;
     color: whitesmoke;
     font-family:'Times New Roman', Times, serif;
+    backdrop-filter:blur(5px);
+    height: -webkit-fill-available;
 }
 .textMainImg p 
 {
     font-size: 45px;
-    margin-top: 20px;
+    
+    
 }
 .textMainImg p a
 {
@@ -43,4 +48,43 @@
 .textMainImg p a:hover
 {
     color:gold;
+}
+
+@media only screen and (max-width:991px)
+{
+    .textMainImg p 
+    {
+        font-size: 35px;
+       
+        
+    }
+    .Img-h3
+    {
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width:767px)
+{
+    .textMainImg p 
+    {
+        font-size: 27px;
+        
+    }
+    .Img-h3
+    {
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width:650px)
+{
+    .textMainImg p 
+    {
+        font-size: 23px;
+        
+        
+    }
+    .Img-h3
+    {
+        font-size: 25px;
+    }
 }
