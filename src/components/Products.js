@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Accordion, Row, Col, Button, ListGroup, FormCheck } from 'react-bootstrap';
 import axios from "axios";
 import "../styles/Products.css";
@@ -6,6 +6,20 @@ import myLogo from "../assets/dev-mostafa-2.jpg";
 
 
 function ProductsPage() {
+
+    useEffect(()=>{
+        GetProducts();
+    },[])
+
+    const [products,setProducts]=useState([]);
+
+    const BaseUrl = "https://fakestoreapi.com";
+    function GetProducts(){
+        axios.get(`${BaseUrl}/products`).then(res=>{console.log(res.data);setProducts(res.data)}).catch(error=>console.log(error));
+    }
+
+
+
     return (
         <div className="MainProducts">
             <Row className="MainProductsRow" xs={1}>
