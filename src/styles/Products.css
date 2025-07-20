@@ -1,0 +1,79 @@
+.MainProductsRow.row
+{
+    flex-direction: row-reverse;
+    margin: 0;
+    margin-top: 10px;
+}
+.RowProducts.row .col
+{
+    margin-top: 10px;
+}
+.CardProduct
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 2px 5px #aaaaaa;
+    border-radius: 10px;
+}
+.productTitle
+{
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.productImg
+{
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+.productFooter
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-between;
+    align-items: baseline;
+    align-items: center;
+    padding: 5px;
+}
+@media only screen and (max-width:575px)
+{
+    .productFooter
+    {
+        flex-direction: column-reverse;
+    }
+}
+.productFooter .productPrice
+{
+    margin-left: 5px;
+}
+.productDiscript
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.Filters.accordion
+{
+    margin-top: 5px;
+}
+
+.accordion-header .accordion-button:not(.collapse)
+{
+    background-color: #aaaaaa;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+}
+.accordion-header .accordion-button:focus
+{
+    box-shadow: none;
+}
+.FilterLable.form-check-label
+{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}
