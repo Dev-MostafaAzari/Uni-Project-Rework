@@ -88,3 +88,41 @@
         font-size: 25px;
     }
 }
+
+.CategoryMainDiv .col
+{
+    margin: 0;
+}
+.CategoryMainTitle h4
+{
+    
+    text-align: center;
+    color: darkgreen;
+    font-family:'Times New Roman', Times, serif;
+}
+.CategoryMainContainer.row
+{
+    justify-content: center;
+    margin: 0;
+}
+.CategoryMainCards
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.CategoryMainImg
+{
+    width: 100%;
+    height: 250px;
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+.CategoryMainSpan
+{
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px
+}

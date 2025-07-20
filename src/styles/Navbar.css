@@ -3,7 +3,10 @@
     background-color: snow;
     border-bottom: 1px solid rgb(76, 76, 223);
 }
-
+.navbar.navbar-light
+{
+    justify-content: center;
+}
 .navbar .container
 {
     margin: 0;
