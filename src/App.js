@@ -1,6 +1,7 @@
 import MainPage from "./components/Main";
 import NavbarPart from "./components/Navbar";
 import ProductsPage from "./components/Products";
+import RegisterPage from "./components/Register";
 
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <div className="App">
      <NavbarPart/>
      {/* <MainPage/> */}
-     <ProductsPage/>
+     {/* <ProductsPage/> */}
+     <RegisterPage/>
     </div>
   );
 }

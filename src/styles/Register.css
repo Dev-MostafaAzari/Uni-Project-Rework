@@ -1,0 +1,37 @@
+
+.RegisterTitle
+{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: blueviolet;
+    margin-top: 10px;
+}
+.FormContainer
+{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    gap: 5px;
+    box-shadow: 2px 2px 5px #aaaaaa;
+    padding: 10px 10px;
+    border-radius: 15px;
+}
+.FormError
+{
+    padding-left: 20px;
+    background-color:snow;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+.haveAccount
+{
+    text-decoration: none;
+}
+.form-floating .form-control:focus
+{
+    box-shadow: none;
+}
