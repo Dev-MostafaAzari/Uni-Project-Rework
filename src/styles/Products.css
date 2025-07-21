@@ -7,6 +7,8 @@
 .RowProducts.row .col
 {
     margin-top: 10px;
+    padding: 3px;
+    
 }
 .CardProduct
 {
@@ -15,6 +17,7 @@
     justify-content: center;
     box-shadow: 2px 2px 5px #aaaaaa;
     border-radius: 10px;
+    
 }
 .productTitle
 {
@@ -22,13 +25,18 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 0px 17px;
+    font-family: 'Times New Roman', Times, serif;
+    color:purple;
+    
 }
 .productImg
 {
-    width: 100%;
-    max-width: 500px;
-    object-fit: cover;
-    object-position: center;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+    
 }
 .productFooter
 {
@@ -45,6 +53,10 @@
     {
         flex-direction: column-reverse;
     }
+    .productTitle
+    {
+        font-size: 18px;
+    }
 }
 .productFooter .productPrice
 {
@@ -55,7 +67,12 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
+    padding: 0px 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.AccordianPart.col
+{
+    margin-top: 10px;
 }
 .Filters.accordion
 {

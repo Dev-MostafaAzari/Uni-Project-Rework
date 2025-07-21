@@ -7,15 +7,15 @@ import myLogo from "../assets/dev-mostafa-2.jpg";
 
 function ProductsPage() {
 
-    useEffect(()=>{
+    useEffect(() => {
         GetProducts();
-    },[])
+    }, [])
 
-    const [products,setProducts]=useState([]);
+    const [products, setProducts] = useState([]);
 
     const BaseUrl = "https://fakestoreapi.com";
-    function GetProducts(){
-        axios.get(`${BaseUrl}/products`).then(res=>{console.log(res.data);setProducts(res.data)}).catch(error=>console.log(error));
+    function GetProducts() {
+        axios.get(`${BaseUrl}/products`).then(res => { console.log(res.data); setProducts(res.data) }).catch(error => console.log(error));
     }
 
 
@@ -23,7 +23,7 @@ function ProductsPage() {
     return (
         <div className="MainProducts">
             <Row className="MainProductsRow" xs={1}>
-                <Col className="col-xl-3">
+                <Col className="col-xl-3 AccordianPart">
                     <Accordion className="Filters">
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>
@@ -33,19 +33,19 @@ function ProductsPage() {
                                 <ListGroup>
                                     <ListGroup.Item>
                                         <FormCheck>
-                                            <FormCheck.Input className="ClothesCheck" type="checkbox"/>
+                                            <FormCheck.Input className="ClothesCheck" type="checkbox" />
                                             <FormCheck.Label className="FilterLable">Clothes</FormCheck.Label>
                                         </FormCheck>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
                                         <FormCheck>
-                                            <FormCheck.Input className="JewelryCheck" type="checkbox"/>
+                                            <FormCheck.Input className="JewelryCheck" type="checkbox" />
                                             <FormCheck.Label className="FilterLable">Jewelry</FormCheck.Label>
                                         </FormCheck>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
                                         <FormCheck>
-                                            <FormCheck.Input className="ElectronicsCheck" type="checkbox"/>
+                                            <FormCheck.Input className="ElectronicsCheck" type="checkbox" />
                                             <FormCheck.Label className="FilterLable">Electronics</FormCheck.Label>
                                         </FormCheck>
                                     </ListGroup.Item>
@@ -75,18 +75,18 @@ function ProductsPage() {
                     </Accordion>
                 </Col>
                 <Col className="col-xl-9">
-                    <Row className="RowProducts" xl={5} lg={4} md={3} sm={2} xs={2}>
-                        <Col>
+                    <Row className="RowProducts" xxl={5} xl={4} lg={3} md={3} sm={2} xs={2}>
+                        {products && products.map((element) => <Col key={element.id} className={element.category}>
                             <div className="CardProduct">
-                                <h4 className="productTitle">Title</h4>
-                                <img className="productImg" src={myLogo} alt="ProductImg"/>
-                                <p className="productDiscript">dadakajdksdjkakhdjahdjahdjhadlodadadadhgjfhjahkauhdkuhadkujhak</p>
+                                <h4 className="productTitle">{element.title}</h4>
+                                <img className="productImg" src={element.image} alt="ProductImg" />
+                                <p className="productDiscript">{element.description}</p>
                                 <div className="productFooter">
                                     <Button className="AddCard btn-primary">Add To Card</Button>
-                                    <span className="productPrice">999$</span>
+                                    <span className="productPrice">{element.price}$</span>
                                 </div>
                             </div>
-                        </Col>
+                        </Col>)}
                     </Row>
                 </Col>
             </Row>
