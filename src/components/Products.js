@@ -18,8 +18,155 @@ function ProductsPage() {
         axios.get(`${BaseUrl}/products`).then(res => { console.log(res.data); setProducts(res.data) }).catch(error => console.log(error));
     }
 
-
-
+    const ClothesCheck = document.getElementById("ClothesCheck");
+    const JewelryCheck = document.getElementById("JewelryCheck");
+    const ElectronicsCheck = document.getElementById("ElectronicsCheck");
+    
+    const filterCloth = () => {
+        const Cloths = document.querySelectorAll(".clothing");
+        const jewelrys = document.querySelectorAll(".jewelery");
+        const electronics = document.querySelectorAll(".electronics");
+        switch (ClothesCheck.checked) {
+            case true:
+                Cloths.forEach(el => el.style.display = "block");
+                if (ElectronicsCheck.checked === true && JewelryCheck.checked === true) {
+                    jewelrys.forEach(el => el.style.display = "block");
+                    electronics.forEach(el => el.style.display = "block");
+                }
+                else if (ElectronicsCheck.checked === false && JewelryCheck.checked === true) {
+                    jewelrys.forEach(el => el.style.display = "block");
+                    electronics.forEach(el => el.style.display = "none");
+                }
+                else if (ElectronicsCheck.checked === true && JewelryCheck.checked === false) {
+                    jewelrys.forEach(el => el.style.display = "none");
+                    electronics.forEach(el => el.style.display = "block");
+                }
+                else {
+                    jewelrys.forEach(el => el.style.display = "none");
+                    electronics.forEach(el => el.style.display = "none");
+                }
+                break;
+            case false:
+                Cloths.forEach(el => el.style.display = "none");
+                if (ElectronicsCheck.checked === true && JewelryCheck.checked === true) {
+                    jewelrys.forEach(el => el.style.display = "block");
+                    electronics.forEach(el => el.style.display = "block");
+                }
+                else if (ElectronicsCheck.checked === false && JewelryCheck.checked === true) {
+                    jewelrys.forEach(el => el.style.display = "block");
+                    electronics.forEach(el => el.style.display = "none");
+                }
+                else if (ElectronicsCheck.checked === true && JewelryCheck.checked === false) {
+                    jewelrys.forEach(el => el.style.display = "none");
+                    electronics.forEach(el => el.style.display = "block");
+                }
+                else {
+                    Cloths.forEach(el => el.style.display = "block");
+                    electronics.forEach(el => el.style.display = "block");
+                    jewelrys.forEach(el => el.style.display = "block");
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    const filterJewelry = () => {
+        const Cloths = document.querySelectorAll(".clothing");
+        const jewelrys = document.querySelectorAll(".jewelery");
+        const electronics = document.querySelectorAll(".electronics");
+        switch (JewelryCheck.checked) {
+            case true:
+                jewelrys.forEach(el => el.style.display = "block");
+                if (ElectronicsCheck.checked === true && ClothesCheck.checked === true) {
+                    Cloths.forEach(el => el.style.display = "block");
+                    electronics.forEach(el => el.style.display = "block");
+                }
+                else if (ElectronicsCheck.checked === false && ClothesCheck.checked === true) {
+                    Cloths.forEach(el => el.style.display = "block");
+                    electronics.forEach(el => el.style.display = "none");
+                }
+                else if (ElectronicsCheck.checked === true && ClothesCheck.checked === false) {
+                    Cloths.forEach(el => el.style.display = "none");
+                    electronics.forEach(el => el.style.display = "block");
+                }
+                else {
+                    Cloths.forEach(el => el.style.display = "none");
+                    electronics.forEach(el => el.style.display = "none");
+                }
+                break;
+            case false:
+                jewelrys.forEach(el => el.style.display = "none");
+                if (ElectronicsCheck.checked === true && ClothesCheck.checked === true) {
+                    Cloths.forEach(el => el.style.display = "block");
+                    electronics.forEach(el => el.style.display = "block");
+                }
+                else if (ElectronicsCheck.checked === false && ClothesCheck.checked === true) {
+                    Cloths.forEach(el => el.style.display = "block");
+                    electronics.forEach(el => el.style.display = "none");
+                }
+                else if (ElectronicsCheck.checked === true && ClothesCheck.checked === false) {
+                    Cloths.forEach(el => el.style.display = "none");
+                    electronics.forEach(el => el.style.display = "block");
+                }
+                else {
+                    Cloths.forEach(el => el.style.display = "block");
+                    electronics.forEach(el => el.style.display = "block");
+                    jewelrys.forEach(el => el.style.display = "block");
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    const filterElectronics = () => {
+        const Cloths = document.querySelectorAll(".clothing");
+        const jewelrys = document.querySelectorAll(".jewelery");
+        const electronics = document.querySelectorAll(".electronics");
+        switch (ElectronicsCheck.checked) {
+            case true:
+                electronics.forEach(el => el.style.display = "block");
+                if (JewelryCheck.checked === true && ClothesCheck.checked === true) {
+                    jewelrys.forEach(el => el.style.display = "block");
+                    Cloths.forEach(el => el.style.display = "block");
+                }
+                else if (JewelryCheck.checked === false && ClothesCheck.checked === true) {
+                    jewelrys.forEach(el => el.style.display = "none");
+                    Cloths.forEach(el => el.style.display = "block");
+                }
+                else if (JewelryCheck.checked === true && ClothesCheck.checked === false) {
+                    jewelrys.forEach(el => el.style.display = "block");
+                    Cloths.forEach(el => el.style.display = "none");
+                }
+                else {
+                    jewelrys.forEach(el => el.style.display = "none");
+                    Cloths.forEach(el => el.style.display = "none");
+                }
+                break;
+            case false:
+                electronics.forEach(el => el.style.display = "none");
+                if (JewelryCheck.checked === true && ClothesCheck.checked === true) {
+                    jewelrys.forEach(el => el.style.display = "block");
+                    Cloths.forEach(el => el.style.display = "block");
+                }
+                else if (JewelryCheck.checked === false && ClothesCheck.checked === true) {
+                    jewelrys.forEach(el => el.style.display = "none");
+                    Cloths.forEach(el => el.style.display = "block");
+                }
+                else if (JewelryCheck.checked === true && ClothesCheck.checked === false) {
+                    jewelrys.forEach(el => el.style.display = "block");
+                    Cloths.forEach(el => el.style.display = "none");
+                }
+                else {
+                    Cloths.forEach(el => el.style.display = "block");
+                    electronics.forEach(el => el.style.display = "block");
+                    jewelrys.forEach(el => el.style.display = "block");
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    
     return (
         <div className="MainProducts">
             <Row className="MainProductsRow" xs={1}>
@@ -33,19 +180,19 @@ function ProductsPage() {
                                 <ListGroup>
                                     <ListGroup.Item>
                                         <FormCheck>
-                                            <FormCheck.Input className="ClothesCheck" type="checkbox" />
+                                            <FormCheck.Input className="ClothesCheck" id="ClothesCheck" onChange={filterCloth} type="checkbox" />
                                             <FormCheck.Label className="FilterLable">Clothes</FormCheck.Label>
                                         </FormCheck>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
                                         <FormCheck>
-                                            <FormCheck.Input className="JewelryCheck" type="checkbox" />
+                                            <FormCheck.Input className="JewelryCheck" id="JewelryCheck" onChange={filterJewelry} type="checkbox" />
                                             <FormCheck.Label className="FilterLable">Jewelry</FormCheck.Label>
                                         </FormCheck>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
                                         <FormCheck>
-                                            <FormCheck.Input className="ElectronicsCheck" type="checkbox" />
+                                            <FormCheck.Input className="ElectronicsCheck" id="ElectronicsCheck" onChange={filterElectronics} type="checkbox" />
                                             <FormCheck.Label className="FilterLable">Electronics</FormCheck.Label>
                                         </FormCheck>
                                     </ListGroup.Item>

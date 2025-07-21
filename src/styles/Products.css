@@ -17,7 +17,13 @@
     justify-content: center;
     box-shadow: 2px 2px 5px #aaaaaa;
     border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s;
     
+}
+.CardProduct:hover
+{
+    box-shadow: 2px 2px 5px rgb(109, 95, 15);
 }
 .productTitle
 {
