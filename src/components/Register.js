@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import axios from 'axios';
 import "../styles/Register.css";
@@ -18,21 +18,17 @@ function RegisterPage() {
 
     const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) })
 
-    const [user, setUser] = useState({ username: "", email: "", password: "" });
-
-
-
-
-
-
-
+    const BaseUrl = "https://fakestoreapi.com";
+    function SendData(data) {
+        axios.post(`${BaseUrl}/users`, data).then(res=>{console.log("data send"); console.log(res.data)}).catch(error=>console.log(error));
+    } 
 
     return (
         <div className="RegisterMain">
             <h3 className="RegisterTitle">Register Panel</h3>
-            <Form className="FormContainer" onSubmit={handleSubmit()}>
+            <Form className="FormContainer" onSubmit={handleSubmit(SendData)}>
                 <Form.Floating>
-                    <Form.Control id="RegisterName" type="text" placeholder="" {...register("username")} />
+                    <Form.Control id="RegisterName" type="text"  placeholder="" {...register("username")} />
                     <Form.Label>Enter UserName</Form.Label>
                 </Form.Floating>
                 <span className="FormError">{errors.username?.message}</span>
