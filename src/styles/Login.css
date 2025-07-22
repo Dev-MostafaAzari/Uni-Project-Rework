@@ -1,0 +1,28 @@
+.loginTitle
+{
+    text-align: center;
+    color: blueviolet;
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 10px;
+}
+.loginForm 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+    gap: 5px;
+    box-shadow: 2px 2px 5px #aaaaaa;
+    padding: 20px 10px;
+    border-radius: 15px;
+}
+.needAccount
+{
+    text-decoration: none;
+    padding-left: 3px;
+}
+.form-floating .form-control:focus
+{
+    box-shadow: none;
+}
