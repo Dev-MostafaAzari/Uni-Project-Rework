@@ -3,16 +3,25 @@ import axios from "axios";
 import { Button, Form,} from 'react-bootstrap';
 import "../styles/Login.css";
 import { LoginOffCanContext } from '../contexts/LoginAndOffcanContext';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 function LoginPage(){
+    //braye redirect kardan bad az submit
+    const navigate =useNavigate()
 
-    const {setData,setProfile,data} = useContext(LoginOffCanContext);
+    const {setData,ProfileOpen,data} = useContext(LoginOffCanContext);
 
-    const BaseUrl ="https://fakestoreapi.com";
+    const BaseUrl ="https://dummyjson.com";
     function LoginSendData(content)
     {
-        axios.post(`${BaseUrl}/auth/login`,{...content}).then(res =>{console.log(res);setProfile(true)}).catch(error => console.log(error.message));
+        axios.post(`${BaseUrl}/auth/login`,{...content}).then(res =>{ProfileOpen();navigate("/");}).catch(error => console.log(error.message));
+    }
+
+    function SubmitHandle(event){
+        event.preventDefault();
+        LoginSendData(data);
     }
 
     function dataInput(event)
@@ -33,7 +42,7 @@ function LoginPage(){
     return(
         <div className="mainLogin">
             <h3 className="loginTitle">Login Panel</h3>
-            <Form className="loginForm" onSubmit={LoginSendData(data)}>
+            <Form className="loginForm" onSubmit={SubmitHandle}>
                 <Form.Floating>
                     <Form.Control name="username" value={data.username} onChange={dataInput} type="text" placeholder=""/>
                     <Form.Label>Username</Form.Label>
@@ -43,7 +52,7 @@ function LoginPage(){
                     <Form.Label>password</Form.Label>
                 </Form.Floating>
                 <Button type="submit">Login</Button>
-                <a href="#" className="needAccount">i dont have an account</a>
+                <Link to="/register" className="needAccount">i dont have an account</Link>
             </Form>
         </div>
     )

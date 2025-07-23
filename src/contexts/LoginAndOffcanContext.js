@@ -8,7 +8,20 @@ function LoginOffcan(props){
 
     const [profile,setProfile]=useState(false);
 
-    const [showof,setShowof]=useState(true);
+    const [showof,setShowof]=useState(false);
+
+    function ProfileOpen(){
+        setProfile(true);
+    }
+
+    function ProfileClose(){
+        setProfile(false);
+    }
+
+    function Open()
+    {
+        setShowof(true);
+    }
 
     function close ()
     {
@@ -16,7 +29,7 @@ function LoginOffcan(props){
     }
 
     return(
-        <LoginOffCanContext.Provider value={{data,profile,setData:setData,setProfile:setProfile,showof,close:close}}>
+        <LoginOffCanContext.Provider value={{data,profile,setData:setData,ProfileOpen:ProfileOpen,ProfileClose:ProfileClose,showof,close:close,Open:Open}}>
             {props.children}
         </LoginOffCanContext.Provider> 
     )

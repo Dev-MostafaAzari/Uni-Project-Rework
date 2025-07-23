@@ -32,7 +32,8 @@
     color: rgb(76, 76, 223);
     transition: all 0.5s;
     font-weight: bold;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Times New Roman', Times, serif;
+    text-decoration: none;
 }
 .navbar-nav a:hover
 {
@@ -45,6 +46,7 @@
     background-color: snow;
     color: rgb(76, 76, 223);
     transition: all 0.5s;
+    padding: 0;
 }
 .navbar-nav .fonts:hover
 {
@@ -58,4 +60,8 @@
 {
     outline: none;
     box-shadow: none;
+}
+.navbar-nav .fontsLink
+{
+    font-size: 30px;
 }

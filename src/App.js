@@ -12,14 +12,17 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <NavbarPart />
-        {/* <MainPage/> */}
-        {/* <ProductsPage/> */}
-        {/* <RegisterPage/> */}
+        
         <LoginOffcan>
-          <LoginPage />
           <OffcanvasPart />
+          <NavbarPart />
         </LoginOffcan>
+        <Routes>
+          <Route path="/" element={<MainPage/>}/>
+          <Route path="/products" element={<ProductsPage/>}/>
+          <Route path="/register" element={<RegisterPage/>}/>
+          <Route path="/login" element={<LoginOffcan><LoginPage/></LoginOffcan>}/>
+        </Routes>
       </div>
 
     </BrowserRouter>

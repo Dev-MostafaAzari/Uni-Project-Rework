@@ -5,6 +5,7 @@ import "../styles/Register.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { Link } from 'react-router-dom';
 
 
 const schema = yup.object().shape({
@@ -48,7 +49,7 @@ function RegisterPage() {
                 </Form.Floating>
                 <span className="FormError">{errors.confirmpassword?.message}</span>
                 <Button id="SubmitBtn" type="submit">Register</Button>
-                <a href="#" className="haveAccount">already have an account!</a>
+                <Link to="/login" className="haveAccount">already have an account!</Link>
             </Form>
         </div>
     )
