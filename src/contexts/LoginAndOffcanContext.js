@@ -6,7 +6,7 @@ function LoginOffcan(props){
 
     const [data,setData]=useState({username:"",password:""});
 
-    const [profile,setProfile]=useState(true);
+    const [profile,setProfile]=useState(false);
     const [showof,setShowof]=useState(false);
 
     function ProfileOpen(){
