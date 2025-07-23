@@ -8,11 +8,11 @@ import "../styles/Offcanvas.css";
 import myLogo from "../assets/dev-mostafa-2.jpg";
 
 function OffcanvasPart(){
-    const {showof,close}=useContext(LoginOffCanContext);
-
+    const {showof,Close}=useContext(LoginOffCanContext);
+    console.log(showof)
     return(
         <div>
-            <Offcanvas show={showof} onHide={close} placement="start">
+            <Offcanvas show={showof} onHide={Close} placement="start">
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Profile Menu</Offcanvas.Title>
                 </Offcanvas.Header>

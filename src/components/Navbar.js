@@ -9,6 +9,7 @@ import { LoginOffCanContext } from '../contexts/LoginAndOffcanContext';
 
 function NavbarPart() {
     const {profile,Open}= useContext(LoginOffCanContext);
+    
 
     return (
         <div>
@@ -18,11 +19,11 @@ function NavbarPart() {
                     <NavbarToggle />
                     <NavbarCollapse>
                         <Nav>
-                            <Nav.Item>{profile ? (<button type="button" onClick={Open()} className="fonts"><FontAwesomeIcon icon={faUserCircle}/></button>) : (<Link to="/login" className="fontsLink"><FontAwesomeIcon icon={faUserCircle}/></Link>)}</Nav.Item>
+                            <Nav.Item>{profile ? <button type="button" onClick={Open} className="fonts"><FontAwesomeIcon icon={faUserCircle}/></button> : <Link to="/login" className="fontsLink"><FontAwesomeIcon icon={faUserCircle}/></Link>}</Nav.Item>
                             <Nav.Item><button type="button" className="fonts"><FontAwesomeIcon icon={faShoppingCart}/></button></Nav.Item>
-                            <Nav.Link><Link to="/">Home</Link></Nav.Link>
-                            <Nav.Link><Link to="/products">Products</Link></Nav.Link>
-                            <Nav.Link><Link to="">ContactMe</Link></Nav.Link>
+                            <Link to="/">Home</Link>
+                            <Link to="/products">Products</Link>
+                            <Link to="">ContactMe</Link>
                         </Nav>
                     </NavbarCollapse>
                 </Container>

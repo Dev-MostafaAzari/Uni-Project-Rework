@@ -11,20 +11,18 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
+      <LoginOffcan>
       <div className="App">
-        
-        <LoginOffcan>
-          <OffcanvasPart />
-          <NavbarPart />
-        </LoginOffcan>
+        <OffcanvasPart />
+        <NavbarPart />
         <Routes>
           <Route path="/" element={<MainPage/>}/>
           <Route path="/products" element={<ProductsPage/>}/>
           <Route path="/register" element={<RegisterPage/>}/>
-          <Route path="/login" element={<LoginOffcan><LoginPage/></LoginOffcan>}/>
+          <Route path="/login" element={<LoginPage/>}/>
         </Routes>
       </div>
-
+      </LoginOffcan>
     </BrowserRouter>
   );
 }
