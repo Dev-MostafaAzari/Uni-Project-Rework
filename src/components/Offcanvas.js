@@ -8,7 +8,7 @@ import "../styles/Offcanvas.css";
 import myLogo from "../assets/dev-mostafa-2.jpg";
 
 function OffcanvasPart(){
-    const {showof,Close}=useContext(LoginOffCanContext);
+    const {showof,Close,LogOut}=useContext(LoginOffCanContext);
     console.log(showof)
     return(
         <div>
@@ -21,12 +21,12 @@ function OffcanvasPart(){
                         <div className="profileImgContainer">
                             <img className="profileImg rounded-pill" src={myLogo} alt="profileImg"/>
                         </div>
-                        <h4 className="welcomeUser">hello mostafa</h4>
+                        <h4 className="welcomeUser">hello Emilys</h4>
                         <ListGroup className="listgroupContent">
                             <ListGroupItem><Link className="offcanvasLink"><FontAwesomeIcon icon={faUserCircle}/> Profile</Link></ListGroupItem>
                             <ListGroupItem><Link className="offcanvasLink"><FontAwesomeIcon icon={faArchive}/> History</Link></ListGroupItem>
                             <ListGroupItem><Link className="offcanvasLink"><FontAwesomeIcon icon={faPhone}/> Support</Link></ListGroupItem>
-                            <ListGroupItem><button className="logoutButton"><FontAwesomeIcon icon={faSignOut}/> LogOut</button></ListGroupItem>
+                            <ListGroupItem><button onClick={LogOut} className="logoutButton"><FontAwesomeIcon icon={faSignOut}/> LogOut</button></ListGroupItem>
                         </ListGroup>
                     </div>
                 </Offcanvas.Body>
