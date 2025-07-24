@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArchive, faPhone, faSignOut, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { LoginOffCanContext } from '../contexts/LoginAndOffcanContext';
 import "../styles/Offcanvas.css";
-import myLogo from "../assets/dev-mostafa-2.jpg";
+import userImg from "../assets/emilys.jpg";
 
 function OffcanvasPart(){
     const {showof,Close,LogOut}=useContext(LoginOffCanContext);
@@ -18,9 +18,9 @@ function OffcanvasPart(){
                 <Offcanvas.Body>
                     <div className="offcanvasContent">
                         <div className="profileImgContainer">
-                            <img className="profileImg rounded-pill" src={myLogo} alt="profileImg"/>
+                            <img className="profileImg rounded-pill" src={userImg} alt="profileImg"/>
                         </div>
-                        <h4 className="welcomeUser">hello Emilys</h4>
+                        <h4 className="welcomeUser">Welcome Emilys</h4>
                         <ListGroup className="listgroupContent">
                             <ListGroupItem><Link className="offcanvasLink"><FontAwesomeIcon icon={faUserCircle}/> Profile</Link></ListGroupItem>
                             <ListGroupItem><Link className="offcanvasLink"><FontAwesomeIcon icon={faArchive}/> History</Link></ListGroupItem>
