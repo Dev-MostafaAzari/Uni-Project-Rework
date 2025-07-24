@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    height: 100vh;
+    margin-top: 20px;
     align-items: center;
     gap: 10px;
 }
@@ -59,7 +59,7 @@
 
 .linkPartContainer
 {
-    height: 50vh;
+    height: 35vh;
 }
 .ContactTitle
 {
@@ -98,4 +98,19 @@
     {
         text-align: center;
     }
+    .SocialLinksContainer
+    {
+        justify-content: center;
+    }
+}
+.SocialLinksContainer
+{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    
+}
+.SocialLinks
+{
+    font-size: 30px;
 }
