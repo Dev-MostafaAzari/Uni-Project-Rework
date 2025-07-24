@@ -1,3 +1,4 @@
+import Contactme from "./components/ContactMe";
 import LoginPage from "./components/Login";
 import MainPage from "./components/Main";
 import NavbarPart from "./components/Navbar";
@@ -20,6 +21,7 @@ function App() {
             <Route path="/products" element={<ProductsPage/>}/>
             <Route path="/register" element={<RegisterPage/>}/>
             <Route path="/login" element={<LoginPage/>}/>
+            <Route path="/contact" element={<Contactme/>}/>
           </Routes>
         </div>
       </LoginOffcan>

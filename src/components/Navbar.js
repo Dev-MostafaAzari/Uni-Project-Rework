@@ -23,7 +23,7 @@ function NavbarPart() {
                             <Nav.Item><button type="button" className="fonts"><FontAwesomeIcon icon={faShoppingCart}/></button></Nav.Item>
                             <Link to="/">Home</Link>
                             <Link to="/products">Products</Link>
-                            <Link to="">ContactMe</Link>
+                            <Link to="/contact">ContactMe</Link>
                         </Nav>
                     </NavbarCollapse>
                 </div>
