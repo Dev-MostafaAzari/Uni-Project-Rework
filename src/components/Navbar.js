@@ -21,7 +21,7 @@ function NavbarPart() {
                         <Nav>
                             <Nav.Item>{profile ? <button type="button" onClick={Open} className="fonts"><FontAwesomeIcon icon={faUserCircle}/></button> : <Link to="/login" className="fontsLink"><FontAwesomeIcon icon={faUserCircle}/></Link>}</Nav.Item>
                             <Nav.Item><button type="button" className="fonts"><FontAwesomeIcon icon={faShoppingCart}/></button></Nav.Item>
-                            <Link to="/">Home</Link>
+                            <Link to="/Uni-Project-Rework">Home</Link>
                             <Link to="/products">Products</Link>
                             <Link to="/contact">ContactMe</Link>
                         </Nav>

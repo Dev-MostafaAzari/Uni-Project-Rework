@@ -17,7 +17,7 @@ function App() {
           <OffcanvasPart />
           <NavbarPart />
           <Routes>
-            <Route path="/" element={<MainPage/>}/>
+            <Route path="/Uni-Project-Rework" element={<MainPage/>}/>
             <Route path="/products" element={<ProductsPage/>}/>
             <Route path="/register" element={<RegisterPage/>}/>
             <Route path="/login" element={<LoginPage/>}/>

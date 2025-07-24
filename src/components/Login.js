@@ -16,7 +16,7 @@ function LoginPage(){
     const BaseUrl ="https://dummyjson.com";
     function LoginSendData(content)
     {
-        axios.post(`${BaseUrl}/auth/login`,{...content}).then(res =>{ProfileOpen();navigate("/");}).catch(error => console.log(error.message));
+        axios.post(`${BaseUrl}/auth/login`,{...content}).then(res =>{ProfileOpen();navigate("/Uni-Project-Rework");}).catch(error => console.log(error.message));
     }
 
     function SubmitHandle(event){

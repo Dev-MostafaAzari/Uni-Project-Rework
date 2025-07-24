@@ -14,8 +14,8 @@ function Contactme() {
                     <p className="ContactText">if you have any inquiries or just want to say hi,please use our contact form </p>
                     <div className="SocialLinksContainer">
                         <a className="SocialLinks" href="https://github.com/Dev-MostafaAzari" target="_blank"><FontAwesomeIcon icon={faGithub}/></a>
-                        <a className="SocialLinks" href="#" target="_blank"><FontAwesomeIcon icon={faInstagram}/></a>
-                        <a className="SocialLinks" href="#" target="_blank"><FontAwesomeIcon icon={faTelegram}/></a>
+                        <a className="SocialLinks" href="https://instagram.com/mostafazari224" target="_blank"><FontAwesomeIcon icon={faInstagram}/></a>
+                        <a className="SocialLinks" href="https://t.me/Mostafa_Azar1" target="_blank"><FontAwesomeIcon icon={faTelegram}/></a>
                     </div>
                 </div>
             </div>
