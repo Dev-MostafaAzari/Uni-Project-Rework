@@ -7,6 +7,8 @@ import "../styles/MainPage.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 
 function MainPage() {
     return (
@@ -25,28 +27,28 @@ function MainPage() {
                 <Col className="CategoryMainItems col-12">
                     <Row className="CategoryMainContainer" xxl={4} xl={4} lg={3} md={2} sm={1} xs={1}>
                         <Col>
-                            <a href="#">
+                            <Link to="/products">
                                 <div className="CategoryMainCards">
                                     <img className="CategoryMainImg" src={CloseImg} alt="Clothes" />
                                     <span className="CategoryMainSpan">Clothes</span>
                                 </div>
-                            </a>
+                            </Link>
                         </Col>
                         <Col>
-                            <a href="#">
+                            <Link to="/products">
                                 <div className="CategoryMainCards">
                                     <img className="CategoryMainImg" src={ElectronicImg} alt="Clothes" />
                                     <span className="CategoryMainSpan">Electronics</span>
                                 </div>
-                            </a>
+                            </Link>
                         </Col>
                         <Col>
-                            <a href="#">
+                            <Link to="/products">
                                 <div className="CategoryMainCards">
                                     <img className="CategoryMainImg" src={JewelryImg} alt="Clothes" />
                                     <span className="CategoryMainSpan">Jewelrys</span>
                                 </div>
-                            </a>
+                            </Link>
                         </Col>
                     </Row>
                 </Col>
