@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const schema = yup.object().shape({
@@ -17,11 +18,13 @@ const schema = yup.object().shape({
 
 function RegisterPage() {
 
+    const Navigate = useNavigate();
+
     const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) })
 
     const BaseUrl = "https://fakestoreapi.com";
     function SendData(data) {
-        axios.post(`${BaseUrl}/users`, data).then(res=>{console.log("data send"); console.log(res.data)}).catch(error=>console.log(error));
+        axios.post(`${BaseUrl}/users`, data).then(res=>{console.log("data send"); console.log(res.data);Navigate("/login")}).catch(error=>console.log(error));
     } 
 
     return (

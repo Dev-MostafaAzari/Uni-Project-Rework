@@ -9,7 +9,6 @@ import myLogo from "../assets/dev-mostafa-2.jpg";
 
 function OffcanvasPart(){
     const {showof,Close,LogOut}=useContext(LoginOffCanContext);
-    console.log(showof)
     return(
         <div>
             <Offcanvas show={showof} onHide={Close} placement="start">

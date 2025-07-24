@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import { Accordion, Row, Col, Button, ListGroup, FormCheck } from 'react-bootstrap';
 import axios from "axios";
 import "../styles/Products.css";
-import myLogo from "../assets/dev-mostafa-2.jpg";
 
 
-function ProductsPage() {
+
+
+
+function ProductsPage(props) {
 
     useEffect(() => {
         GetProducts();
@@ -166,7 +168,7 @@ function ProductsPage() {
                 break;
         }
     }
-    
+
     return (
         <div className="MainProducts">
             <Row className="MainProductsRow" xs={1}>
@@ -238,6 +240,9 @@ function ProductsPage() {
                 </Col>
             </Row>
         </div>
+
+
+
     )
 }
 

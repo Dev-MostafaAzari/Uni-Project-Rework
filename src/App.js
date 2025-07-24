@@ -12,16 +12,16 @@ function App() {
   return (
     <BrowserRouter>
       <LoginOffcan>
-      <div className="App">
-        <OffcanvasPart />
-        <NavbarPart />
-        <Routes>
-          <Route path="/" element={<MainPage/>}/>
-          <Route path="/products" element={<ProductsPage/>}/>
-          <Route path="/register" element={<RegisterPage/>}/>
-          <Route path="/login" element={<LoginPage/>}/>
-        </Routes>
-      </div>
+        <div className="App">
+          <OffcanvasPart />
+          <NavbarPart />
+          <Routes>
+            <Route path="/" element={<MainPage/>}/>
+            <Route path="/products" element={<ProductsPage/>}/>
+            <Route path="/register" element={<RegisterPage/>}/>
+            <Route path="/login" element={<LoginPage/>}/>
+          </Routes>
+        </div>
       </LoginOffcan>
     </BrowserRouter>
   );
