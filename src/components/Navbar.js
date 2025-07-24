@@ -14,7 +14,7 @@ function NavbarPart() {
     return (
         <div>
             <Navbar expand="lg">
-                <Container>
+                <div className="navContainer">
                     <NavbarBrand href="https://github.com/Dev-MostafaAzari" target="_blank"><img src={myLogo} alt="myLogo" width={70} /></NavbarBrand>
                     <NavbarToggle />
                     <NavbarCollapse>
@@ -26,7 +26,7 @@ function NavbarPart() {
                             <Link to="">ContactMe</Link>
                         </Nav>
                     </NavbarCollapse>
-                </Container>
+                </div>
 
             </Navbar>
         </div>

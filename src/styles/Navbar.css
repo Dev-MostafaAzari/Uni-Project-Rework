@@ -10,10 +10,15 @@
         justify-content: center;
     }
 }
-.navbar .container
+.navbar .navContainer
 {
+    width: 100%;
     margin: 0;
-
+    padding: 0px 10px;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
 }
 .navbar-brand img 
 {
