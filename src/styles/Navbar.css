@@ -57,15 +57,12 @@
 {
     color:black;
 }
-.navbar-toggler
-{
-    outline: none;
-}
-.container .navbar-toggler:focus
+.navbar button.navbar-toggler
 {
     outline: none;
     box-shadow: none;
 }
+
 .navbar-nav .fontsLink
 {
     font-size: 30px;
