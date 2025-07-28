@@ -1,6 +1,6 @@
 import React from 'react';
 import mainImg from "../assets/6.jpg";
-import CloseImg from "../assets/clothes.jpg";
+import CloseImg from "../assets/clothes-new.jpg";
 import JewelryImg from "../assets/jewelry.jpg";
 import ElectronicImg from "../assets/electronics.jpg";
 import "../styles/MainPage.css"
