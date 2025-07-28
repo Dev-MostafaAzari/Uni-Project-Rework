@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Uni-Project-Rework/static/css/main.3012a148.css",
+    "main.css": "/Uni-Project-Rework/static/css/main.108000e0.css",
     "main.js": "/Uni-Project-Rework/static/js/main.fa15948f.js",
     "static/js/453.8a36450e.chunk.js": "/Uni-Project-Rework/static/js/453.8a36450e.chunk.js",
     "static/media/6.jpg": "/Uni-Project-Rework/static/media/6.38f5f88b91fe7c633ec8.jpg",
@@ -10,12 +10,12 @@
     "static/media/dev-mostafa-2.jpg": "/Uni-Project-Rework/static/media/dev-mostafa-2.eeea51321c9840348cf2.jpg",
     "static/media/emilys.jpg": "/Uni-Project-Rework/static/media/emilys.86185a71876006c91b8b.jpg",
     "index.html": "/Uni-Project-Rework/index.html",
-    "main.3012a148.css.map": "/Uni-Project-Rework/static/css/main.3012a148.css.map",
+    "main.108000e0.css.map": "/Uni-Project-Rework/static/css/main.108000e0.css.map",
     "main.fa15948f.js.map": "/Uni-Project-Rework/static/js/main.fa15948f.js.map",
     "453.8a36450e.chunk.js.map": "/Uni-Project-Rework/static/js/453.8a36450e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3012a148.css",
+    "static/css/main.108000e0.css",
     "static/js/main.fa15948f.js"
   ]
 }
