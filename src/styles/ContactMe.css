@@ -7,6 +7,8 @@
     margin-top: 20px;
     align-items: center;
     gap: 10px;
+    max-height: 750px;
+    height: 100vh;
 }
 .inputPartContainer
 {
@@ -79,11 +81,11 @@
     .mainContentContainer
     {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
         height: 100vh;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         gap: 10px;
     }
     .linkPartContainer
@@ -101,6 +103,10 @@
     .SocialLinksContainer
     {
         justify-content: center;
+    }
+    .ContactText
+    {
+        text-align: center;
     }
 }
 .SocialLinksContainer
