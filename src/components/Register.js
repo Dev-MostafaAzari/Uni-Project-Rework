@@ -24,36 +24,38 @@ function RegisterPage() {
 
     const BaseUrl = "https://fakestoreapi.com";
     function SendData(data) {
-        axios.post(`${BaseUrl}/users`, data).then(res=>{console.log("data send"); console.log(res.data);Navigate("/login")}).catch(error=>console.log(error));
-    } 
+        axios.post(`${BaseUrl}/users`, data).then(res => { console.log("data send"); console.log(res.data); Navigate("/login") }).catch(error => console.log(error));
+    }
 
     return (
-        <div className="RegisterMain">
-            <h3 className="RegisterTitle">Register Panel</h3>
-            <Form className="FormContainer" onSubmit={handleSubmit(SendData)}>
-                <Form.Floating>
-                    <Form.Control id="RegisterName" type="text"  placeholder="" {...register("username")} />
-                    <Form.Label>Enter UserName</Form.Label>
-                </Form.Floating>
-                <span className="FormError">{errors.username?.message}</span>
-                <Form.Floating>
-                    <Form.Control id="RegisterGmail" type="text" placeholder="" {...register("gmail")} />
-                    <Form.Label>Enter Gmail</Form.Label>
-                </Form.Floating>
-                <span className="FormError">{errors.gmail?.message}</span>
-                <Form.Floating>
-                    <Form.Control id="RegisterPass" type="password" placeholder="" {...register("password")} />
-                    <Form.Label>Enter Password</Form.Label>
-                </Form.Floating>
-                <span className="FormError">{errors.password?.message}</span>
-                <Form.Floating>
-                    <Form.Control id="RegisterCPass" type="password" placeholder="" {...register("confirmpassword")} />
-                    <Form.Label>Confirm Password</Form.Label>
-                </Form.Floating>
-                <span className="FormError">{errors.confirmpassword?.message}</span>
-                <Button id="SubmitBtn" type="submit">Register</Button>
-                <Link to="/login" className="haveAccount">already have an account!</Link>
-            </Form>
+        <div className="outerDivRegister">
+            <div className="RegisterMain">
+                <h3 className="RegisterTitle">Register Panel</h3>
+                <Form className="FormContainer" onSubmit={handleSubmit(SendData)}>
+                    <Form.Floating>
+                        <Form.Control id="RegisterName" type="text" placeholder="" {...register("username")} />
+                        <Form.Label>Enter UserName</Form.Label>
+                    </Form.Floating>
+                    <span className="FormError">{errors.username?.message}</span>
+                    <Form.Floating>
+                        <Form.Control id="RegisterGmail" type="text" placeholder="" {...register("gmail")} />
+                        <Form.Label>Enter Gmail</Form.Label>
+                    </Form.Floating>
+                    <span className="FormError">{errors.gmail?.message}</span>
+                    <Form.Floating>
+                        <Form.Control id="RegisterPass" type="password" placeholder="" {...register("password")} />
+                        <Form.Label>Enter Password</Form.Label>
+                    </Form.Floating>
+                    <span className="FormError">{errors.password?.message}</span>
+                    <Form.Floating>
+                        <Form.Control id="RegisterCPass" type="password" placeholder="" {...register("confirmpassword")} />
+                        <Form.Label>Confirm Password</Form.Label>
+                    </Form.Floating>
+                    <span className="FormError">{errors.confirmpassword?.message}</span>
+                    <Button id="SubmitBtn" type="submit">Register</Button>
+                    <Link to="/login" className="haveAccount">already have an account!</Link>
+                </Form>
+            </div>
         </div>
     )
 }

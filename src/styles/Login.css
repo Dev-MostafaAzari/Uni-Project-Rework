@@ -1,3 +1,18 @@
+.outerDivLogin
+{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    height: 70vh;
+
+}
+.mainLogin
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
 .loginTitle
 {
     text-align: center;
@@ -11,7 +26,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 1000px;
-    margin: auto;
+    width: 90vw;
     gap: 5px;
     box-shadow: 2px 2px 5px #aaaaaa;
     padding: 20px 10px;
